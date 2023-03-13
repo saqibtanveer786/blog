@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  border: 2px dashed red;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  /* border: 1px solid black; */
+}
+
+header > nav {
+  /* border: 1px solid blue; */
+}
+
+header > nav > ul > li > a {
+  text-decoration: none;
+  color: aqua;
+}
+
+header > nav.mainMenu > ul {
+  list-style-type: none;
+  display: flex;
+  gap: min(5vw, 40px);
+}
+
+header > nav.signInUp > ul {
+  list-style-type: none;
+  display: flex;
+  gap: min(3vw, 10px);
+}
