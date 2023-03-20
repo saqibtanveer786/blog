@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  word-wrap: break-word;
+}
+
+.latestPostsContainer {
+  padding: 10vh 3vw;
+}
+
+.latestPostsContainer > h1 {
+  padding-bottom: 5vh;
+  text-align: center;
+}
+
+.latestPosts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+/* .widget {
+  width: 0;
+  height: 900px;
+  background-color: gray;
+} */

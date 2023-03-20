@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.appContainer {
+  background-color: #fff;
+  left: 15rem;
+  min-height: 100vh;
+  position: fixed;
+  top: 3.5rem;
+  width: calc(100vw - 15rem);
+}
+
+.loginContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20vh 10px;
+}
+
+.loginLogo {
+  width: 10.25rem;
+  /* padding-left: 2.125rem; */
+}
+
+.loginLogo img {
+  width: 10.25rem !important;
+}
+
+/* .loginWelcome {
+  padding-left: 10.5rem;
+  padding-top: 13.5rem;
+} */
+
+.loginWelcome img {
+  width: 18.75rem;
+}
+
+.loginWelcome p {
+  font-size: 2rem;
+  /* padding-left: 2.125rem; */
+  word-wrap: break-word;
+}
+
+.loginFormContainer {
+  /* padding-top: 6.5rem; */
+}
+
+.loginForm {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  padding: 1.25rem;
+  width: 24.75rem;
+}
+
+.loginForm input {
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  padding: 0.875rem 1rem;
+  width: 100%;
+}
+
+.loginSubmitBtn {
+  background-color: #0b65c2;
+  border: 0;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  padding: 0.875rem 1rem;
+  width: 100%;
+}
+
+.loginSubmitBtn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.loginForgotPassword {
+  border-bottom: 1px solid #e5e7eb;
+  color: #0b65c2;
+  display: block;
+  font-size: 0.9375rem;
+  padding: 1.25rem 0;
+  text-align: center;
+}
+
+.loginForgotPassword:hover {
+  cursor: pointer;
+}
+
+.loginSignup {
+  color: #0b65c2;
+  display: block;
+  font-size: 0.9375rem;
+  padding: 1.25rem 0;
+  text-align: center;
+}
+
+.loginSignup:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@media (max-width: 440px) {
+  .loginForm {
+    width: 90vw;
+  }
+
+  .loginWelcome p {
+    font-size: max(7vw, 25px);
+  }
+}

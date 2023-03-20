@@ -5,10 +5,11 @@
 }
 
 header {
-  border: 2px dashed red;
+  /* border: 2px dashed red; */
   padding: 10px 30px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -28,10 +29,20 @@ header > nav.mainMenu > ul {
   list-style-type: none;
   display: flex;
   gap: min(5vw, 40px);
+  flex-wrap: wrap;
+  padding: 0 15px;
 }
 
 header > nav.signInUp > ul {
   list-style-type: none;
   display: flex;
   gap: min(3vw, 10px);
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+@media (max-width: 502px) {
+  header {
+    display: none;
+  }
 }

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.heroSection {
+  height: max(75vmin, 500px);
+  border-bottom: 4px solid black;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+/* I used Hero Section in many pages(about etc) and pass page title as prop to display in hero section. e.g title for about page is "About Us" i passed it as a props and display in hero section */
+.heroSection > h1 {
+  font-size: 2em;
+}
+
+.heroSection::before {
+  height: calc(max(75vmin, 500px) + 40px);
+  width: 100%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+    url(../../public/images/front.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: ;
+  background-size: cover;
+  z-index: -1;
+}
+
+@media (max-width: 502px) {
+  .heroSection::before {
+    height: calc(max(75vmin, 500px));
+  }
+}
