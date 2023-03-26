@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/post.module.css';
+import '../css/post.css';
 
 export default function Post({ title, author, body, createdAt }) {
   return (

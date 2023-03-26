@@ -3,7 +3,8 @@
   width: clamp(50px, 19vw, 200px);
   box-shadow: 1px 1px 5px gray;
   padding: 30px 5px;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 10px 0;
+  position: sticky;
 }
 
 .sidebarPostCRUD > h4 {
@@ -32,4 +33,10 @@
 .sidebarPostCRUD_Menu > li {
   text-align: left;
   padding: 7px 0 0 max(5px, 2vw);
+}
+
+@media (max-width: 900px) {
+  .sidebarMain {
+    display: none;
+  }
 }

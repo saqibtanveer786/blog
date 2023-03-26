@@ -5,7 +5,7 @@
 }
 
 .postContainer {
-  width: 20rem;
+  width: clamp(16.5rem, 20vw, 20rem);
   box-shadow: 1px 1px 5px gray;
   /* margin-inline: auto; */
 }
@@ -27,4 +27,11 @@
 .postAuthor,
 .postDate {
   font-size: smaller;
+}
+
+@media (max-width: 604px) {
+  .postContainer {
+    width: 96%;
+    box-shadow: 1px 1px 5px gray;
+  }
 }
