@@ -1,0 +1,24 @@
+.topImage {
+  height: 60vh;
+  background: url(../../public/images/front.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  padding-top: 10vh;
+}
+
+.title {
+  font-size: max(min(2vw, 30px), 20px);
+  font-weight: 500;
+}
+
+.author {
+  font-size: smaller;
+}
+
+.description {
+  padding-top: max(min(3vmin, 20px), 10px);
+}

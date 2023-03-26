@@ -1,0 +1,35 @@
+.sidebarMain {
+  height: 100vh;
+  width: clamp(50px, 19vw, 200px);
+  box-shadow: 1px 1px 5px gray;
+  padding: 30px 5px;
+  border-radius: 10px 0 0 10px;
+}
+
+.sidebarPostCRUD > h4 {
+  text-align: left;
+  padding-bottom: 15px;
+
+  padding-left: max(5px, 2vw);
+}
+
+.sidebarPostCRUD_Menu > ul {
+  list-style-type: none;
+}
+
+.sidebarPostCRUD_Menu > li {
+  list-style-type: none;
+  margin-block: 5px;
+}
+
+.sidebarPostCRUD_Menu > li > a {
+  text-decoration: none;
+  padding-block-end: 3px;
+  border-bottom: 2px solid gray;
+  cursor: pointer;
+}
+
+.sidebarPostCRUD_Menu > li {
+  text-align: left;
+  padding: 7px 0 0 max(5px, 2vw);
+}

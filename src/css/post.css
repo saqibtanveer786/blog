@@ -6,7 +6,8 @@
 
 .postContainer {
   width: 20rem;
-  border: 1px solid red;
+  box-shadow: 1px 1px 5px gray;
+  /* margin-inline: auto; */
 }
 
 .postImage {

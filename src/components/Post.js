@@ -1,19 +1,19 @@
 import React from 'react';
-import '../css/post.css';
+import '../styles/post.module.css';
 
-export default function Post() {
+export default function Post({ title, author, body, createdAt }) {
   return (
     <>
       <div className="postContainer">
         <div className="postImage"></div>
         <div className="postContent">
-          <h4 className="postTitle">My First Post</h4>
+          <h4 className="postTitle">{title}</h4>
           <p className="postAuthor">
-            author <span className="postDate">1-1-1</span>
+            @{author}
+            <span className="postDate"> {createdAt}</span>
           </p>
           <p className="postDescription" style={{ paddingTop: '10px' }}>
-            This is an post for test no it is not a real content i am typing
-            just for filling the space...
+            {body}
           </p>
         </div>
       </div>

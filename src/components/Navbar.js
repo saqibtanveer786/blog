@@ -24,6 +24,9 @@ export default function Navbar() {
           <li>
             <Link to="/">Contact</Link>
           </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
         </ul>
       </nav>
       <nav className="signInUp">

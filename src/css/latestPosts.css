@@ -7,7 +7,9 @@
 }
 
 .latestPostsContainer {
-  padding: 10vh 3vw;
+  padding: 0 3vw;
+
+  margin: auto;
 }
 
 .latestPostsContainer > h1 {
@@ -20,7 +22,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5vw;
+  gap: max(5vw, 20px);
 }
 /* .widget {
   width: 0;

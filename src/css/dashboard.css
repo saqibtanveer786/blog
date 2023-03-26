@@ -1,0 +1,21 @@
+.mainContainer {
+  display: flex;
+  padding-block-start: 30px;
+  padding-inline: min(1vw, 20px);
+}
+
+.dashboardTop {
+  height: min(30vmax, 300px);
+  width: 82%;
+  margin-inline: auto;
+  margin-block-start: 1%;
+  background: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+    url(../../public/images/dashnoardTop.jpg);
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+body {
+  height: 100vh;
+}
