@@ -7,12 +7,12 @@
 }
 
 .latestPostsContainer {
-  padding: 0 3vw;
-
+  padding: 3vh 3vw;
   margin: auto;
 }
 
-.latestPostsContainer > h1 {
+h1 {
+  display: block;
   padding-bottom: 5vh;
   text-align: center;
 }
@@ -23,9 +23,15 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: max(5vw, 20px);
+  scroll-behavior: calc(250px + 15px + 30px);
 }
 /* .widget {
   width: 0;
   height: 900px;
   background-color: gray;
 } */
+
+.latestPostsMain {
+  height: 100vh;
+  overflow-x: scroll;
+}

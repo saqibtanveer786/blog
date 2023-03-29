@@ -1,0 +1,30 @@
+.categoriesMainBox {
+  width: 82%;
+  margin-inline: auto;
+  margin-block: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.categoryBox {
+  border: 2px solid red;
+  height: 100px;
+  padding: 10px 5px;
+  gap: 5px;
+  /* width: clamp(150px, 30%, 150px); */
+  height: fit-content;
+}
+
+.categoryDescription {
+  font-size: smaller;
+  padding-top: 7px;
+}
+
+@media (max-width: 604px) {
+  .categoryBox {
+    display: none;
+  }
+}

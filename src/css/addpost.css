@@ -1,0 +1,19 @@
+.addPostForm {
+  padding-block-start: 10vh;
+  padding-inline: 15%;
+}
+
+.inputs {
+  width: clamp(150px, 80%, 1000px);
+  margin-block: 5px;
+  border-bottom: 2px solid gray;
+  outline: none;
+  text-align: left;
+  padding: 8px 10px;
+  font-size: medium;
+}
+
+.imageField {
+  border: none;
+  /* padding-inline-start: 10px; */
+}

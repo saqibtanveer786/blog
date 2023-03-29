@@ -1,7 +1,7 @@
 .mainContainer {
   display: flex;
   padding-block-start: 30px;
-  padding-inline: min(1vw, 20px);
+  padding-inline: min(1%, 20px);
 }
 
 .dashboardTop {
@@ -18,4 +18,11 @@
 
 body {
   height: 100vh;
+}
+
+@media (max-width: 604px) {
+  .dashboardTop {
+    height: min(30vmax, 300px);
+    width: 96%;
+  }
 }

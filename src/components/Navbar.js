@@ -27,6 +27,9 @@ export default function Navbar() {
           <li>
             <Link to="/dashboard">Dashboard</Link>
           </li>
+          <li>
+            <Link to="/addpost">Add Post</Link>
+          </li>
         </ul>
       </nav>
       <nav className="signInUp">

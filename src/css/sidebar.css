@@ -1,5 +1,5 @@
 .sidebarMain {
-  height: 100vh;
+  height: 90%;
   width: clamp(50px, 19vw, 200px);
   box-shadow: 1px 1px 5px gray;
   padding: 30px 5px;
