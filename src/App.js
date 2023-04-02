@@ -11,7 +11,10 @@ import AddPost from './pages/AddPost';
 import BlogState from './context/BlogState';
 // import PostPage from './pages/PostPage';
 
+import dotenv from 'dotenv';
+
 function App() {
+  dotenv.config();
   return (
     <>
       <BlogState>

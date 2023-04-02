@@ -5,15 +5,12 @@ import BlogContext from '../context/BlogContext';
 import { useEffect } from 'react';
 
 export default function LatestPosts() {
-  const { posts, apiCallForPosts } = useContext(BlogContext);
+  const { posts, getAllPosts } = useContext(BlogContext);
 
   //Initializing API Call For Getting Posts.
   useEffect(() => {
-    const returnValue = apiCallForPosts(
-      'http://localhost:5000/api/v1/blogposts/allposts',
-      'GET',
-      null,
-      null
+    const returnValue = getAllPosts(
+      'http://localhost:5000/api/v1/blogposts/allposts'
     );
 
     console.log(returnValue);
