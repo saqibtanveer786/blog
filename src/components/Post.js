@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/post.css';
 import deletePng from '../assests/icons/delete.png';
-// import postJpg from 'http://localhost:5000/assests/images/post.jpg';
 import updatePng from '../assests/icons/update.png';
 import { useContext } from 'react';
 import BlogContext from '../context/BlogContext';
@@ -15,9 +14,6 @@ export default function Post({
   imageUrl,
 }) {
   const { deletePost, updatePost } = useContext(BlogContext);
-  const myStyle = {
-    backgroundImage: 'http://localhost:5000/assests/images/post.jpg',
-  };
 
   return (
     <>
@@ -42,7 +38,7 @@ export default function Post({
             />
           </div>
         )}
-        <div className="postImage" style={myStyle}></div>
+        <div className="postImage"></div>
         <div className="postContent">
           <h4 className="postTitle">{title}</h4>
           <p className="postAuthor">

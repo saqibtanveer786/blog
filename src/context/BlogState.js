@@ -1,11 +1,11 @@
 import BlogContext from './BlogContext';
 import React, { useState } from 'react';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
 export default function BlogState(props) {
   const [posts, setPosts] = useState([]);
 
-  dotenv.config();
+  // dotenv.config();
 
   //FUNCTION TO MANAGE API CALL
   async function getAllPosts(endPoint) {

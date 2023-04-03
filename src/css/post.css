@@ -13,7 +13,7 @@
 .postImage {
   height: 250px;
   border-radius: 0 0 15px 15px;
-  /* background-image: url(../../public/images/post.jpg); */
+  background-image: url(../assests/images/post.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -52,7 +52,7 @@
 
 @media (max-width: 604px) {
   .postContainer {
-    width: 96%;
+    width: 96vw;
     box-shadow: 1px 1px 5px gray;
   }
 }
