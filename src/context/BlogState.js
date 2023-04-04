@@ -8,7 +8,7 @@ export default function BlogState(props) {
   // dotenv.config();
 
   //FUNCTION TO MANAGE API CALL
-  async function getAllPosts(endPoint) {
+  async function getAllPosts() {
     const data = await fetch(`${process.env.REACT_APP_API_URL}/allposts`, {
       method: 'GET',
       headers: {

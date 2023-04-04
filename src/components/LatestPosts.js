@@ -9,9 +9,7 @@ export default function LatestPosts() {
 
   //Initializing API Call For Getting Posts.
   useEffect(() => {
-    const returnValue = getAllPosts(
-      'http://localhost:5000/api/v1/blogposts/allposts'
-    );
+    const returnValue = getAllPosts();
 
     console.log(returnValue);
     // eslint-disable-next-line

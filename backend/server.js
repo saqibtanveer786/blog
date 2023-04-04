@@ -4,7 +4,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 
 const hostname = '127.0.0.1';
-const port = 5000;
+const port = process.env.PORT;
 
 //Connectiong To Mongo db
 mongoConnect();
