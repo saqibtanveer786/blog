@@ -21,10 +21,10 @@ app.use(express.json());
 // app.use('/api/v1/user', require('./routes/user.js'));
 app.use('/api/v1/blogposts', require('./routes/blogposts.js'));
 
-if (process.env.PORT) {
-  app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-  });
-}
+// if (process.env.PORT) {
+//   app.listen(port, hostname, () => {
+//     console.log(`Server running at http://${hostname}:${port}/`);
+//   });
+// }
 
 module.exports = app;
