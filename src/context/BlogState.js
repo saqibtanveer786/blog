@@ -9,7 +9,7 @@ export default function BlogState(props) {
 
   //FUNCTION TO MANAGE API CALL
   async function getAllPosts() {
-    const data = await fetch(`/allposts`, {
+    const data = await fetch(`${process.env.REACT_APP_API_URL}/allposts`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ export default function BlogState(props) {
 
   // FUNCTION TO ADD A POST
   async function addPost(endPoint, postToAdd) {
-    const data = await fetch(`/addpost`, {
+    const data = await fetch(`${process.env.REACT_APP_API_URL}/addpost`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ export default function BlogState(props) {
     console.log(id);
     // const strid = JSON.stringify(id);
     const data = await fetch(
-      `/deletepost/${id}
+      `${process.env.REACT_APP_API_URL}/deletepost/${id}
       `,
       {
         method: 'DELETE',
@@ -50,7 +50,7 @@ export default function BlogState(props) {
     );
     const jsData = await data.json();
     console.log(jsData);
-    getAllPosts('/allposts');
+    getAllPosts('${process.env.REACT_APP_API_URL}/allposts');
   }
 
   return (
