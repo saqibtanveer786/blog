@@ -7,7 +7,7 @@ const verifyingUser = require('../middlewares/getUser');
 
 // ROUTE 1
 // This route is for getting all the products.  LOGIN NOT REQUIRED.   Both For Admin and Simple User
-router.get('/allposts', async (req, res) => {
+router.get('/backend/allposts', async (req, res) => {
   // const user = await Users.findOne({ email: req.body.email });
   // if (user.admin !== true) {
   //   res.send(401).json('Not Allowed');
@@ -28,7 +28,7 @@ router.get('/allposts', async (req, res) => {
 
 // ROUTE 1
 // This route is for getting all the products.  LOGIN NOT REQUIRED.   Both For Admin and Simple User
-router.get('/getpost', async (req, res) => {
+router.get('/backend/getpost', async (req, res) => {
   if (req.params.id) {
     post = await blogpostsModel.find({ id: req.params.id });
     res.json(post);
@@ -37,7 +37,7 @@ router.get('/getpost', async (req, res) => {
 
 // ROUTE 2
 // This route is for adding a post. ONLY FOR SPECIFIC USERS. LOGIN REQUIRED.
-router.post('/addpost', async (req, res) => {
+router.post('/backend/addpost', async (req, res) => {
   try {
     // const user = await User.findById(req.user.id);
     // if (!user) {
@@ -59,7 +59,7 @@ router.post('/addpost', async (req, res) => {
 
 // ROUTE 3
 // This route is for deleting a product. ONLY FOR SPECIFIC USERS. LOGIN REQUIRED.
-router.delete('/deletepost/:id', async (req, res) => {
+router.delete('/backend/deletepost/:id', async (req, res) => {
   try {
     // const user = await User.findById(req.user.id);
     // if (!user) {
@@ -82,7 +82,7 @@ router.delete('/deletepost/:id', async (req, res) => {
 
 // ROUTE 4
 // This route is for updating a post. ONLY FOR SPECIFIC USERS. LOGIN REQUIRED.
-router.put('/updatepost/:id', async (req, res) => {
+router.put('/backend/updatepost/:id', async (req, res) => {
   try {
     const id = req.params.id;
 
