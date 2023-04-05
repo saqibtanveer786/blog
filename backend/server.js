@@ -6,6 +6,10 @@ const dotenv = require('dotenv');
 const hostname = '127.0.0.1';
 const port = process.env.PORT;
 
+const blogpostsModel = require('./modals/BlogPosts');
+const bodyParser = require('body-parser');
+const verifyingUser = require('./middlewares/getUser');
+
 //Connectiong To Mongo db
 mongoConnect();
 
@@ -16,27 +20,20 @@ const app = express();
 //Middlewares
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.json());
 
 // routes
 // app.use('/api/v1/user', require('./routes/user.js'));
 // app.use('/backend', require('./routes/blogposts.js'));
 
 //pasting router here for deployment
-const blogpostsModel = require('./modals/BlogPosts');
 // const router = express.Router();
-const bodyParser = require('body-parser');
 // const userdetails = require('./middleware/');
 // const User = require('../modals/Users');
-const verifyingUser = require('./middlewares/getUser');
 
-app.use(bodyParser.json());
 // ROUTE 1
 // This route is for getting all the products.  LOGIN NOT REQUIRED.   Both For Admin and Simple User
 app.get('/backend/allposts', async (req, res) => {
-  // const user = await Users.findOne({ email: req.body.email });
-  // if (user.admin !== true) {
-  //   res.send(401).json('Not Allowed');
-  // }
   let allPosts;
   if (req.query.author) {
     allPosts = await blogpostsModel.find({ author: req.query.author });
@@ -64,11 +61,6 @@ app.get('/backend/getpost', async (req, res) => {
 // This route is for adding a post. ONLY FOR SPECIFIC USERS. LOGIN REQUIRED.
 app.post('/backend/addpost', async (req, res) => {
   try {
-    // const user = await User.findById(req.user.id);
-    // if (!user) {
-    //   return res.status(401).json('NOT ALLOWED');
-    // }
-
     const postInformation = req.body;
     const post = await new blogpostsModel(postInformation);
     const savedPost = await post.save();
@@ -86,11 +78,6 @@ app.post('/backend/addpost', async (req, res) => {
 // This route is for deleting a product. ONLY FOR SPECIFIC USERS. LOGIN REQUIRED.
 app.delete('/backend/deletepost/:id', async (req, res) => {
   try {
-    // const user = await User.findById(req.user.id);
-    // if (!user) {
-    //   return res.status(401).json('NOT ALLOWED');
-    // }
-
     const id = req.params.id;
     blogpostsModel
       .findByIdAndDelete(id)

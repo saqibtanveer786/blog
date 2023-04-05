@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 module.exports = async function connectToMongo() {
+  mongoose.set('strictQuery', true);
   await mongoose.connect(
     process.env.REACT_APP_API_URL ||
       `mongodb+srv://saqib:saqib123@blog.oalntnk.mongodb.net/?retryWrites=true&w=majority`
