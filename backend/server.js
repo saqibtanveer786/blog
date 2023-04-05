@@ -19,7 +19,7 @@ app.use(express.json());
 
 // routes
 // app.use('/api/v1/user', require('./routes/user.js'));
-app.use('/api/v1/blogposts', require('./routes/blogposts.js'));
+app.use('/backend', require('./routes/blogposts.js'));
 
 // if (process.env.PORT) {
 //   app.listen(port, hostname, () => {
