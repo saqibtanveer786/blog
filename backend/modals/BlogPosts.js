@@ -5,23 +5,23 @@ const blogpostsSchema = new Schema(
   {
     title: {
       type: String,
-      require: true,
+      require: false,
     },
     description: {
       type: String,
-      require: true,
+      require: false,
     },
     image: {
       type: String,
-      require: true,
+      require: false,
     },
     author: {
       type: String,
-      require: true,
+      require: false,
     },
     category: {
       type: Array,
-      require: true,
+      require: false,
       default: 'General',
     },
     isLatest: {
