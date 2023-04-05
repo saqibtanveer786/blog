@@ -1,10 +1,12 @@
 const express = require('express');
 const blogpostsModel = require('../modals/BlogPosts');
 const router = express.Router();
+const bodyParser = require('body-parser');
 // const userdetails = require('./middleware/');
 // const User = require('../modals/Users');
 const verifyingUser = require('../middlewares/getUser');
 
+router.use(bodyParser.json());
 // ROUTE 1
 // This route is for getting all the products.  LOGIN NOT REQUIRED.   Both For Admin and Simple User
 router.get('/backend/allposts', async (req, res) => {
